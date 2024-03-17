@@ -1,0 +1,159 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>文字复制示例</title>  
+<style>  
+    body {  
+        font-family: Arial, sans-serif;  
+        margin: 0;  
+        padding: 20px;  
+    }  
+    .copyable-text {  
+        margin-bottom: 10px;  
+    }  
+    button {  
+        padding: 5px 10px;  
+        font-size: 14px;  
+        cursor: pointer;  
+    }  
+</style>  
+</head>  
+<body>  
+  
+<div>  
+    <!-- 文字内容和复制按钮 -->  
+    <div class="copyable-text" v-for="(text, index) in texts" :key="index">  
+        <p>风景好，听说有1万多棵杜鹃花，都是老树，景区里还有团建烧烤的地方，小孩子玩的各式各样的滑滑梯，团建带娃的好去处，穿上古装去拍照都是大片</p>  
+        <button onclick="copyText(this, '风景好，听说有1万多棵杜鹃花，都是老树，景区里还有团建烧烤的地方，小孩子玩的各式各样的滑滑梯，团建带娃的好去处，穿上古装去拍照都是大片')">复制</button>  
+    </div>  
+</div>  
+
+<div>  
+    <!-- 文字内容和复制按钮 -->  
+    <div class="copyable-text" v-for="(text, index) in texts" :key="index">  
+        <p>周末带孩子来，比那种室内游乐场合算多了，早上来，带上帐篷，带上零食和水待一天。孩子开心，大人也有得玩，孩子周末的成长手册有内容了。缺点:里面吃饭很不方便，里面吃的还是方便型实物为主，比如烤肠。</p>  
+        <button onclick="copyText(this, '周末带孩子来，比那种室内游乐场合算多了，早上来，带上帐篷，带上零食和水待一天。孩子开心，大人也有得玩，孩子周末的成长手册有内容了。缺点:里面吃饭很不方便，里面吃的还是方便型实物为主，比如烤肠。')">复制</button>  
+    </div>  
+</div>  
+ 
+<div>  
+    <!-- 文字内容和复制按钮 -->  
+    <div class="copyable-text" v-for="(text, index) in texts" :key="index">  
+        <p>需要门票的 可以抖音上先买好 能优惠点 门票包含小火车里面有彩虹跑道 还有粉色沙滩 适合拍照</p>  
+        <button onclick="copyText(this, '需要门票的 可以抖音上先买好 能优惠点 门票包含小火车里面有彩虹跑道 还有粉色沙滩 适合拍照')">复制</button>  
+    </div>  
+</div>  
+
+<div>  
+    <!-- 文字内容和复制按钮 -->  
+    <div class="copyable-text" v-for="(text, index) in texts" :key="index">  
+        <p>景点玩法:观景，游乐皆可
+价格:现在早鸟票39
+排队:人不算太多，基本不太需要排队 
+设施:完善
+交通:自驾，公交皆可</p>  
+        <button onclick="copyText(this, '景点玩法:观景，游乐皆可
+价格:现在早鸟票39
+排队:人不算太多，基本不太需要排队 
+设施:完善
+交通:自驾，公交皆可')">复制</button>  
+    </div>  
+</div>  
+
+<div>  
+    <!-- 文字内容和复制按钮 -->  
+    <div class="copyable-text" v-for="(text, index) in texts" :key="index">  
+        <p>环境优美 适合带孩子去玩，带上吃喝带上一个垫子可以在里面玩一天</p>  
+        <button onclick="copyText(this, '环境优美 适合带孩子去玩，带上吃喝带上一个垫子可以在里面玩一天')">复制</button>  
+    </div>  
+</div>  
+
+<div>  
+    <!-- 文字内容和复制按钮 -->  
+    <div class="copyable-text" v-for="(text, index) in texts" :key="index">  
+        <p>最美四月天，-草一木一山一水，犹如仙镜。今天是周末，人山人海值得一游</p>  
+        <button onclick="copyText(this, '最美四月天，-草一木一山一水，犹如仙镜。今天是周末，人山人海值得一游')">复制</button>  
+    </div>  
+</div>  
+
+<div>  
+    <!-- 文字内容和复制按钮 -->  
+    <div class="copyable-text" v-for="(text, index) in texts" :key="index">  
+        <p>很适合带娃玩，门票55一张，大人可以做室内休息，孩子游玩项目很多，拍照取景好地方，杜鹃花花海，一片油菜花，集美们，我已经帮你们玩过了，可以放心来!不需要排队</p>  
+        <button onclick="copyText(this, '很适合带娃玩，门票55一张，大人可以做室内休息，孩子游玩项目很多，拍照取景好地方，杜鹃花花海，一片油菜花，集美们，我已经帮你们玩过了，可以放心来!不需要排队')">复制</button>  
+    </div>  
+</div>  
+
+<div>  
+    <!-- 文字内容和复制按钮 -->  
+    <div class="copyable-text" v-for="(text, index) in texts" :key="index">  
+        <p>带着老人和小孩一起去玩，风景特别美，我带着宝贝去玩，他们玩的舍不得走</p>  
+        <button onclick="copyText(this, '带着老人和小孩一起去玩，风景特别美，我带着宝贝去玩，他们玩的舍不得走')">复制</button>  
+    </div>  
+</div>  
+
+<script>  
+function copyText(button, text) {  
+    // 创建临时的textarea元素  
+    var textArea = document.createElement("textarea");  
+      
+    // 设置textarea的内容为需要复制的文字  
+    textArea.value = text;  
+      
+    // 将textarea添加到文档中  
+    document.body.appendChild(textArea);  
+      
+    // 选中textarea的内容  
+    textArea.focus();  
+    textArea.select();  
+      
+    try {  
+        // 执行复制命令  
+        var successful = document.execCommand('copy');  
+        var msg = successful ? '成功复制到剪贴板' : '无法复制到剪贴板';  
+        alert(msg);  
+    } catch (err) {  
+        console.error('复制失败:', err);  
+    }  
+      
+    // 移除textarea元素  
+    document.body.removeChild(textArea);  
+}  
+</script>  
+  
+<script>  
+// 这里模拟你的文本数组  
+// var texts = [  
+    '1',  
+    '2',  
+    '3',  
+    '4',  
+    '5',  
+    '6',  
+    '7',  
+    '8',  
+    '9',  
+    '10'  
+];  
+  
+// 使用模板字符串将文本数组注入到HTML中  
+var htmlContent = `  
+<div>  
+    <!-- 文字内容和复制按钮 -->  
+    ${texts.map((text, index) => `  
+    <div class="copyable-text">  
+        <p>${text}</p>  
+        <button onclick="copyText(this, '${text}')">复制</button>  
+    </div>  
+    `).join('')}  
+</div>  
+`;  
+  
+// 将生成的HTML内容插入到body中  
+document.body.insertAdjacentHTML('beforeend', htmlContent);  
+</script>  
+  
+</body>  
+</html>
